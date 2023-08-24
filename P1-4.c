@@ -7,7 +7,6 @@ void main()
 {
     // Setup
     char Message[50];
-    char Scambled[50];
     short int Shift;
     printf("Enter a string of letters: ");
     strupr(gets(Message));
