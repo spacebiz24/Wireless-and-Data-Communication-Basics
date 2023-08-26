@@ -2,19 +2,19 @@
 #include <conio.h>
 #include <string.h>
 
-char stuffedData[50] = {"01111110"}, deStuffedData[50], character;
+char stuffedData[50] = {"01111110"}, deStuffedData[50], inputCharacter;
 int length = 8, count = 0;
 
 void stuffData()
 {
     printf("\nEnter the Data:\n"); // Add data to the string after the preamble
-    while ((character = getche()) != '\r')
+    while ((inputCharacter = getche()) != '\r')
     {
-        if (character == '1')
+        if (inputCharacter == '1')
             count++;
         else
             count = 0;
-        stuffedData[length++] = character;
+        stuffedData[length++] = inputCharacter;
         if (count == 5)
         {
             stuffedData[length++] = '0'; // Check if five consecutive 1's exist in the data and add a 0 after that
