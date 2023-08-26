@@ -17,7 +17,7 @@ void stuffData()
         stuffedData[length++] = character;
         if (count == 5)
         {
-            stuffedData[length++] = '0'; // Check if five consecutive1's exist in the data and add a 0 after that
+            stuffedData[length++] = '0'; // Check if five consecutive 1's exist in the data and add a 0 after that
             count = 0;
         }
     }
