@@ -30,10 +30,10 @@ void stuffData()
 void destuffData()
 {
     printf("\nDe-Stuffed Stream:\n");
-    for (int j = 2, k = 0; j, k < length - 2; j++, k++)
+    for (int j = 2, k = 0; j, k < length; j++, k++)
     {
         if (stuffedData[j] == DLE)
-            ++j;
+            j++;
         deStuffedData[k] = stuffedData[j];
     }
     for (int i = 0; i < length - 2; i++)
