@@ -7,7 +7,7 @@ int length = 8, count = 0;
 
 void stuffData()
 {
-    printf("\nEnter the Data:\n"); // Add data to tge string after the preamble
+    printf("\nEnter the Data:\n"); // Add data to the string after the preamble
     while ((character = getche()) != '\r')
     {
         if (character == '1')
