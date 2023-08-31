@@ -7,7 +7,7 @@ void main()
 {
     // Setup
     char Message[50];
-    short int Shift;
+    int Shift;
     printf("Enter a string of letters: ");
     strupr(gets(Message));
 
