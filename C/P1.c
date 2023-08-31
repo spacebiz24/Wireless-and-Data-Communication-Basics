@@ -54,6 +54,7 @@ int main()
         printf("The received message is intact\n");
     else
         printf("The received message has been corrupted\n");
+    printf("Press a key to exit");
     getch();
     return 0;
 }
