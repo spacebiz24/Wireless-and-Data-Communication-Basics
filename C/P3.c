@@ -44,4 +44,6 @@ void main()
 {
     stuffData();
     destuffData();
+    printf("Press a key to exit");
+    getch();
 }
