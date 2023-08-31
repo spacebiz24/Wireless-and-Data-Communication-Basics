@@ -40,5 +40,6 @@ void main()
                     Message[i]--;
             }
     printf("Original Message: %s\n", Message);
+    printf("Press a key to exit");
     getch();
 }
