@@ -3,15 +3,11 @@
 #include <string.h>
 #include <conio.h>
 
-void main()
-{
-    // Setup
-    char Message[50];
-    int Shift;
-    printf("Enter a string of letters: ");
-    strupr(gets(Message));
+char Message[50];
+int Shift;
 
-    // Encryption
+void encrypt()
+{
     printf("Enter Encryption Key: ");
     scanf("%d", &Shift);
     Shift %= 26;
@@ -25,8 +21,10 @@ void main()
                     Message[i]++;
             }
     printf("Scrambled text: %s\n", Message);
+}
 
-    // Decryption
+void decrypt()
+{
     printf("Enter Decryption Key: ");
     scanf("%d", &Shift);
     Shift %= 26;
@@ -40,6 +38,14 @@ void main()
                     Message[i]--;
             }
     printf("Original Message: %s\n", Message);
+}
+
+void main()
+{
+    printf("Enter a string of letters: ");
+    strupr(gets(Message));
+    encrypt();
+    decrypt();
     printf("Press a key to exit");
     getch();
 }
