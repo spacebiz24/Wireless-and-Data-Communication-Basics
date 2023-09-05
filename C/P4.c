@@ -1,3 +1,5 @@
+// Encryption and decryption of a text using Caesar Cipher
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <ctype.h>
@@ -43,7 +45,7 @@ void decrypt()
 
 void main()
 {
-    printf("Enter a string of letters: ");
+    printf("Enter the Message: ");
     strupr(gets(Message));
     encrypt();
     decrypt();
