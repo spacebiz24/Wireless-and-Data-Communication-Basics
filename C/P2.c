@@ -1,3 +1,5 @@
+// Bit stuffing and de-stuffing of a single frame of data
+
 #include <stdio.h>
 #include <conio.h>
 #include <string.h>
