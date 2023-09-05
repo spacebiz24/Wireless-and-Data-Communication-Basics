@@ -1,3 +1,5 @@
+// Error detection using CRC 16-bit algorithm
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
