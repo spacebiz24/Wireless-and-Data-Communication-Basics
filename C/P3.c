@@ -1,3 +1,5 @@
+// Character stuffing and de-stuffing of a single frame of data
+
 #include <stdio.h>
 #include <string.h>
 #include <conio.h>
