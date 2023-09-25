@@ -1,4 +1,4 @@
-% Log Distance No Shadow
+% Analysis of Log-distance path loss propagation model (w/o Shadow)
 clc
 close all;
 Fixed_Distance = input("Enter the reference distance: ");
