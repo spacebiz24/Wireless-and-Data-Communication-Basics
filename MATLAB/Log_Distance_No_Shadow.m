@@ -26,5 +26,5 @@ legend("Retail Store", "Grocery Store", "Office Hard Partition", "Office Soft Pa
     "Paper/Cereals", "Metal Working", "Indoor Street", "Textile/Chemical", "Metal Working");
 xlabel("Distance in m");
 ylabel("Path Loss in dB");
-title("Log-Distance Path Loss Indoor Propagation Model (With Shadowing Effect)");
+title("Log-Distance Path Loss Indoor Propagation Model (Without Shadowing Effect)");
 grid on;
