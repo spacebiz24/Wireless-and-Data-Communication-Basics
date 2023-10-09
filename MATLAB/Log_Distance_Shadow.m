@@ -11,7 +11,7 @@ Sigma = [8.7, 5.2, 7.0, 9.6, 14.1, 3.0, 7.0, 6.0, 5.8, 7.0, 9.7, 6.8];
 for i = 1:12
     Lambda(i) = 3e8 / (Frequency(i) * 10 ^ 6);
     PL_D0(i) = -10 * log10((Lambda(i) ^ 2) / ((4 * pi * Fixed_Distance) ^ 2));
-    X(i) = Sigma(i) * randn(size(PL_D0(i)));
+    X(i) = normrnd(0, sigma(i));
     disp(X(i));
 end
 for i = 1:12
