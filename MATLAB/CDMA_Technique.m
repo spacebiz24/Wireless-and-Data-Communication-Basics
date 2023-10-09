@@ -32,7 +32,7 @@ for Number = 1:4
     grid();
 end
 
-subplot(2, 2, 3);
+subplot(4, 4, 5:8);
 stairs(Multiplexed_Data);
 title("Multiplexed Channnel Data");
 xlim(XLimiter)
@@ -51,7 +51,7 @@ end
 Demultiplexed_Data = Demultiplexed_Data / 4;
 
 for Number = 1:4
-    subplot(4, 4, Number + 4);
+    subplot(4, 4, Number+8);
     stairs(Decrypted_Walsh_Table(Number, :));
     str = sprintf("Inner Product %d", Number);
     title(str);
@@ -60,7 +60,7 @@ for Number = 1:4
     grid();
 end
 
-subplot(2, 2, 4);
+subplot(4, 4, 13:16);
 stairs(Demultiplexed_Data);
 title("Demultiplexed Channnel Data");
 xlim(XLimiter)
