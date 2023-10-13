@@ -3,8 +3,8 @@ clc
 clear;
 close all;
 BitStream = [-1 -1 0 1];
-XLimiter = [1 5];
-YLimiter = [-4 4];
+XRange = [1 5];
+YRange = [-4 4];
 
 % Creating the Walsh Table
 Walsh = 1;
@@ -28,8 +28,8 @@ for Number = 1:4
     stairs(Encrypted_Walsh_Table(Number, :));
     str = sprintf("Station %d Code", Number);
     title(str);
-    xlim(XLimiter);
-    ylim(YLimiter);
+    xlim(XRange);
+    ylim(YRange);
     grid();
 end
 
@@ -56,8 +56,8 @@ for Number = 1:4
     stairs(Decrypted_Walsh_Table(Number, :));
     str = sprintf("Inner Product %d", Number);
     title(str);
-    xlim(XLimiter);
-    ylim(YLimiter);
+    xlim(XRange);
+    ylim(YRange);
     grid();
 end
 
