@@ -7,16 +7,17 @@ XLimiter = [1 5];
 YLimiter = [-4 4];
 
 % Creating the Walsh Table
-Walsh1 = 1;
-Walsh2 = [Walsh1, Walsh1; Walsh1, -Walsh1];
-Walsh4 = [Walsh2, Walsh2; Walsh2, -Walsh2];
+Walsh = 1;
+for i = 1:2
+    Walsh = [Walsh, Walsh; Walsh, -Walsh];
+end
 
 Multiplexed_Data = zeros(1, 4);
 Encrypted_Walsh_Table = zeros(4, 4);
 
 for row = 1:4
     for col = 1:4
-        Encrypted_Walsh_Table(row, col) = BitStream(row) * Walsh4(row, col);
+        Encrypted_Walsh_Table(row, col) = BitStream(row) * Walsh(row, col);
         Multiplexed_Data(col) = Multiplexed_Data(col) + Encrypted_Walsh_Table(row, col);
     end
 end
@@ -44,8 +45,8 @@ Decrypted_Walsh_Table = zeros(4, 4);
 
 for row = 1:4
     for col = 1:4
-        Decrypted_Walsh_Table(row, col) = Multiplexed_Data(col) * Walsh4(row, col);
-        Demultiplexed_Data(row) = Demultiplexed_Data(row) + Multiplexed_Data(col) * Walsh4(row, col);
+        Decrypted_Walsh_Table(row, col) = Multiplexed_Data(col) * Walsh(row, col);
+        Demultiplexed_Data(row) = Demultiplexed_Data(row) + Multiplexed_Data(col) * Walsh(row, col);
     end
 end
 Demultiplexed_Data = Demultiplexed_Data / 4;
