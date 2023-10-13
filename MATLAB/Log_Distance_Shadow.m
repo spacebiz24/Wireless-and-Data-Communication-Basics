@@ -4,9 +4,9 @@ close all;
 Fixed_Distance = input("Enter the reference distance: ");
 Arbitrary_Distance = 1000 : 1000 : 20000;
 % Values must be between 1.6 to 6
-Path_Loss_Exponent = [2.2, 1.8, 3.0, 2.4, 2.6, 2.0, 2.1, 1.8, 1.6, 3.0, 3.1, 3.2];
-Frequency = [914, 914, 1500, 900, 1900, 1300, 4000, 1300, 1300, 900, 4000, 1300];
-Sigma = [8.7, 5.2, 7.0, 9.6, 14.1, 3.0, 7.0, 6.0, 5.8, 7.0, 9.7, 6.8];
+Path_Loss_Exponent = rand(1,12)*(6-1.6) + 1.6;
+Frequency = randi([900, 4000], 1,12);
+Sigma = rand(1,12)*(15-3) + 3;
 
 for i = 1:12
     Lambda(i) = 3e8 / (Frequency(i) * 10 ^ 6);
