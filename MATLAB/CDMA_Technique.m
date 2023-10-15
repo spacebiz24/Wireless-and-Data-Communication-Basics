@@ -22,7 +22,7 @@ for row = 1:4
     end
 end
 
-figure(1);
+figure;
 for Number = 1:4
     subplot(4, 4, Number);
     stairs(Encrypted_Walsh_Table(Number, :));
