@@ -14,7 +14,7 @@ for i = 1:12
     Lambda(i) = 3e8 / (Frequency(i) * 10 ^ 6);
     PL_D0(i) = -10 * log10((Lambda(i) ^ 2) / ((4 * pi * Fixed_Distance) ^ 2));
     if(with_shadowing)
-        X(i) = normrnd(0, sigma(i));
+        X(i) = Sigma(i) * randn(size(PL_D0(i)));
     end
 end
 for i = 1:12
