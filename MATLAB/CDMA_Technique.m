@@ -2,7 +2,7 @@
 clc
 clear;
 close all;
-BitStream = [-1 -1 0 1];
+BitStream = input("Enter 4 bits of data: ");
 XRange = [1 5];
 YRange = [-4 4];
 
