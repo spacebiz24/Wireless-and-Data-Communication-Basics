@@ -62,6 +62,6 @@ end
 subplot(4, 4, 13:16);
 stairs(Demultiplexed_Data);
 title("Demultiplexed Channnel Data");
-xlim(XLimiter)
-ylim(YLimiter)
+xlim(XRange);
+ylim(YRange);
 grid();
