@@ -26,8 +26,7 @@ figure;
 for Number = 1:4
     subplot(4, 4, Number);
     stairs(Encrypted_Walsh_Table(Number, :));
-    str = sprintf("Station %d Code", Number);
-    title(str);
+    title(sprintf("Station %d Code", Number));
     xlim(XRange);
     ylim(YRange);
     grid();
@@ -54,8 +53,7 @@ Demultiplexed_Data = Demultiplexed_Data / 4;
 for Number = 1:4
     subplot(4, 4, Number+8);
     stairs(Decrypted_Walsh_Table(Number, :));
-    str = sprintf("Inner Product %d", Number);
-    title(str);
+    title(sprintf("Inner Product %d", Number));
     xlim(XRange);
     ylim(YRange);
     grid();
