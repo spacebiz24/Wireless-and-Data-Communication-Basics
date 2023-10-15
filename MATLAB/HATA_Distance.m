@@ -21,7 +21,7 @@ Medium_Path_Loss_2_dB = Medium_Path_Loss_2 - (4.78 * log10(Frequency) * log10(Fr
     + 18.33 * log10(Frequency) - 40.98;
 
 % Large City Urban Area
-if Frequency < 3000000000
+if Frequency < 3e9
     Area_HRE_3 = 8.29 * (log10(1.54 * Effective_Receiver_Height)) * log10(1.54 * Effective_Receiver_Height)...
         - 1.1;
 else
