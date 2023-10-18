@@ -35,8 +35,8 @@ end
 subplot(4, 4, 5:8);
 stairs(Multiplexed_Data);
 title("Multiplexed Channnel Data");
-xlim(XLimiter)
-ylim(YLimiter)
+xlim(XRange)
+ylim(YRange)
 grid();
 
 Demultiplexed_Data = zeros(1, 4);
