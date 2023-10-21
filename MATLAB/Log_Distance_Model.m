@@ -1,7 +1,8 @@
 % Analysis of Log-distance path loss propagation model (w/ & w/o Shadow)
 clc
 close all;
-with_shadowing = 0;
+
+with_shadowing = input("w/ Shadowing? ");
 Fixed_Distance = input("Enter the reference distance: ");
 Arbitrary_Distance = 1000 : 1000 : 20000;
 % Values must be between 1.6 to 6
@@ -29,5 +30,5 @@ legend("Retail Store", "Grocery Store", "Office Hard Partition", "Office Soft Pa
     "Paper/Cereals", "Metal Working", "Indoor Street", "Textile/Chemical", "Metal Working");
 xlabel("Distance in m");
 ylabel("Path Loss in dB");
-title("Log-Distance Path Loss Indoor Propagation Model (With Shadowing Effect)");
+title("Log-Distance Path Loss Indoor Propagation Model");
 grid on;
