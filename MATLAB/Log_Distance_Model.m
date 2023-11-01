@@ -4,7 +4,7 @@ close all;
 
 with_shadowing = input("w/ Shadowing? ");
 Fixed_Distance = input("Enter the reference distance: ");
-Arbitrary_Distance = 1000 : 1000 : 20000;
+Arbitrary_Distance = 1e3 : 1e3 : 20e3;
 % Values must be between 1.6 to 6
 Path_Loss_Exponent = rand(1,12)*(6-1.6) + 1.6;
 Frequency = randi([900, 4000], 1,12);
