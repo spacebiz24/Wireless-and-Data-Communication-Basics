@@ -33,13 +33,13 @@ void stuffData()
 void destuffData()
 {
     count = 0;
-    for (int j = 8, k = 0; j < length; j++)
+    for (int j = 8, k = 0; j < length; j++, k++)
     {
         if (stuffedData[j] == '1')
             count++;
         else
             count = 0;
-        deStuffedData[k++] = stuffedData[j];
+        deStuffedData[k] = stuffedData[j];
         if (count == 5) // Remove the zero added after five 1's to get back the original data
         {
             j++;
