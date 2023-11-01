@@ -40,7 +40,7 @@ void destuffData()
         else
             count = 0;
         deStuffedData[k++] = stuffedData[j];
-        if (count == 5 && stuffedData[j + 1] == '0') // Remove the zero added after five 1's to get back the original data
+        if (count == 5) // Remove the zero added after five 1's to get back the original data
         {
             j++;
             count = 0;
