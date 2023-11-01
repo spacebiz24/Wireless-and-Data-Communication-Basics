@@ -4,12 +4,15 @@
 #include <conio.h>
 #include <string.h>
 
-char stuffedData[50] = {"01111110"}, deStuffedData[50], inputCharacter;
-int length = 8, count;
+char flag[] = "01111110", stuffedData[50], deStuffedData[50];
+int length, count;
 
 void stuffData()
 {
+    char inputCharacter;
+    length = 8;
     count = 0;
+    strcat(stuffedData, flag);
     printf("\nEnter the Data:\n"); // Add data to the string after the preamble
     while ((inputCharacter = getche()) != '\r')
     {
@@ -24,37 +27,37 @@ void stuffData()
             count = 0;
         }
     }
-    strcat(stuffedData, "01111110"); // Add the postamble
-    printf("\nBit Stuffed Stream:\n");
-    for (int i = 0; i < length + 8; i++)
-        printf("%c", stuffedData[i]);
+    strcat(stuffedData, flag); // Add the postamble
+    printf("\n\nBit Stuffed Stream:\n");
+    printf("%s\n", stuffedData);
 }
 
 void destuffData()
 {
+    length = 0;
     count = 0;
-    for (int j = 8, k = 0; j < length; j++, k++)
+    for (int i = 8; i < strlen(stuffedData) - 8; i++)
     {
-        if (stuffedData[j] == '1')
+        if (stuffedData[i] == '1')
             count++;
         else
             count = 0;
-        deStuffedData[k] = stuffedData[j];
+        deStuffedData[length++] = stuffedData[i];
         if (count == 5) // Remove the zero added after five 1's to get back the original data
         {
-            j++;
+            i++;
             count = 0;
         }
     }
+    deStuffedData[length] = '\0';
     printf("\nDe-Stuffed Stream:\n");
-    for (int j = 0; j < length - 8; j++)
-        printf("%c", deStuffedData[j]);
+    printf("%s\n", deStuffedData);
 }
 
 void main()
 {
     stuffData();
     destuffData();
-    printf("Press a key to exit");
+    printf("\nPress a key to exit");
     getch();
 }
