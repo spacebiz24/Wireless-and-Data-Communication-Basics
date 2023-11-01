@@ -9,6 +9,7 @@ int length = 8, count = 0;
 
 void stuffData()
 {
+    count = 0;
     printf("\nEnter the Data:\n"); // Add data to the string after the preamble
     while ((inputCharacter = getche()) != '\r')
     {
@@ -32,7 +33,7 @@ void stuffData()
 void destuffData()
 {
     count = 0;
-    printf("\nDe-Stuffed Stream:\n");
+    
     for (int j = 8, k = 0; j < length; j++)
     {
         if (stuffedData[j] == '1')
@@ -46,6 +47,7 @@ void destuffData()
             count = 0;
         }
     }
+    printf("\nDe-Stuffed Stream:\n");
     for (int j = 0; j < length - 8; j++)
         printf("%c", deStuffedData[j]);
 }
