@@ -52,7 +52,7 @@ int main()
     // Receiver
     printf("Received message: %s\n", Message);
     CRC(strcpy(Residue, Message), Polynomial);
-    if (!strcmp(Residue, "0000"))
+    if (strcmp(Residue, "0000") == 0)
         printf("The received message is intact\n");
     else
         printf("The received message has been corrupted\n");
