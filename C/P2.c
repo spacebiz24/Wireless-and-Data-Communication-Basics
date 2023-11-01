@@ -33,7 +33,6 @@ void stuffData()
 void destuffData()
 {
     count = 0;
-    
     for (int j = 8, k = 0; j < length; j++)
     {
         if (stuffedData[j] == '1')
