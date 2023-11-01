@@ -5,7 +5,7 @@
 #include <string.h>
 
 char stuffedData[50] = {"01111110"}, deStuffedData[50], inputCharacter;
-int length = 8, count = 0;
+int length = 8, count;
 
 void stuffData()
 {
