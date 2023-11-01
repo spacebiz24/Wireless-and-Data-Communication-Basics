@@ -1,10 +1,10 @@
-% Bit Error Rate of AWGN and Rayleigh Channel
+% Analysis of Bit Error Rate(BER) for BPSK signals over AWGN and Rayleigh channels
 clc;
 close all;
 
 m = 10^5;
-snr_dB = 0:1:20; % use this in P0
-for i = 1:1:length(snr_dB)
+snr_dB = 0:20; 
+for i = 1:length(snr_dB)
     n_err = 0;
     n_bits = 0;
     while n_err < 100
