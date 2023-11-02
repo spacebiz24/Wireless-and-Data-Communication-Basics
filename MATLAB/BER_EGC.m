@@ -5,8 +5,8 @@ clear all;
 % Number of information bits
 m= 10^3;
 %Range of SNR values
-snrdB = [0:1:20];
-for j=1:1:length(snrdB)
+snrdB = 0:20;
+for j=1:length(snrdB)
     nerr = 0;
     nbits = 0;
     while nerr < 100
