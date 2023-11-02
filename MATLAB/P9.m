@@ -1,5 +1,5 @@
-% Analysis of Bit Error Rate(BER) of receivers with Maximal Radio Combining(MRC) 
-% receiving diversity in frequency-flat and in slowly varying fading channel
+%{ Analysis of Bit Error Rate(BER) of receivers with Maximal Radio Combining(MRC) 
+   receiving diversity in frequency-flat and in slowly varying fading channel  %}
 clc;
 close all;
 
