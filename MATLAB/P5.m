@@ -7,8 +7,8 @@ Fixed_Distance = input("Enter the reference distance: ");
 Arbitrary_Distance = 1e3 : 1e3 : 20e3;
 % Values must be between 1.6 to 6
 Path_Loss_Exponent = rand(1,12)*(6-1.6) + 1.6;
-Frequency = randi([900, 4000], 1,12);
 Sigma = rand(1,12)*(15-3) + 3;
+Frequency = randi([900, 4000], 1,12);
 X = zeros(1,12);
 
 for i = 1:12
