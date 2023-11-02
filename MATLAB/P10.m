@@ -1,7 +1,9 @@
-% Bit Error Rate of Equal Gain Combining
+% Analysis of Bit Error Rate(BER) of receivers with Equal Gain Combining(EGC) 
+% receiving diversity in frequency-flat and in slowly varying fading channel
+
 clc;
 close all;
-clear all;
+
 % Number of information bits
 m= 10^3;
 %Range of SNR values
