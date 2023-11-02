@@ -22,7 +22,7 @@
 		$$\frac{V_3}{V_1} = e^{-\alpha(l_3-l_1)}$$
 
 	1. Coupling Loss:
-    		- Connect a 1m OFC to a 3m OFC via a coupler
+		- Connect a 1m OFC to a 3m OFC via a coupler
 		- Measure $V_{4_{pk-pk}}$ of the (1+3)m OFC
 		- Compute the coupling loss using the following formula
 
@@ -30,7 +30,7 @@
 		$$\alpha ' = 4.343\times\alpha$$
 
 	1. Numerical Aperture:
-    		- Insert one end of the fibre to 650nm LED
+    	- Insert one end of the fibre to 650nm LED
 		- Insert the other end into the Numerical Aperture Measurement Unit
 		- Measure the radius of the spot ($r$) & height from the ground ($d$)
 		- Find the Numerical aperture from the following relation
@@ -40,10 +40,10 @@
 1. ### Digital:
    	1. Initialisation:
    		- Toggle to digital mode
-   	   	- Turn off signal generator & remove all existing connections
+   	   	- Turn off the signal generator & remove all existing connections
    
 	1. Time Division Multiplexing:
-    		Connect the OFC from 850 nm LED (Tx) to the op-amp (Rx)
+    	- Connect the OFC from 850 nm LED (Tx) to the op-amp (Rx)
 		- Remove S4's jumper
 		- Output of the op-amp is connected to the upper pin of S4
 		- The other pin is connected to IO2 which is connected to the CRO
