@@ -8,8 +8,8 @@
 #define STX 2
 #define ETX 3
 
-char stuffedData[50], deStuffedData[50];
 char Preamble[] = {DLE, STX}, Postamble[] = {DLE, ETX};
+char stuffedData[50], deStuffedData[50];
 int length;
 
 void stuffData()
