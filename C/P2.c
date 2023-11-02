@@ -4,7 +4,7 @@
 #include <string.h>
 #include <conio.h>
 
-char flag[] = "01111110", stuffedData[50], deStuffedData[50];
+char flag[] = "01111110", stuffedData[50], deStuffedData[50]; // put vars in main later
 int length, count;
 
 void stuffData()
