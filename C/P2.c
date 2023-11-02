@@ -1,8 +1,8 @@
 // Bit stuffing and de-stuffing of a single frame of data
 
 #include <stdio.h>
-#include <conio.h>
 #include <string.h>
+#include <conio.h>
 
 char flag[] = "01111110", stuffedData[50], deStuffedData[50];
 int length, count;
