@@ -12,8 +12,8 @@ for i = 1:2
     Walsh = [Walsh, Walsh; Walsh, -Walsh];
 end
 
-Multiplexed_Data = zeros(1, 4);
 Encrypted_Walsh_Table = zeros(4, 4);
+Multiplexed_Data = zeros(1, 4);
 
 for row = 1:4
     for col = 1:4
@@ -39,8 +39,8 @@ xlim(XRange)
 ylim(YRange)
 grid();
 
-Demultiplexed_Data = zeros(1, 4);
 Decrypted_Walsh_Table = zeros(4, 4);
+Demultiplexed_Data = zeros(1, 4);
 
 for row = 1:4
     for col = 1:4
