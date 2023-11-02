@@ -13,12 +13,12 @@ void encrypt()
 {
     printf("Enter Encryption Key: ");
     scanf("%d", &Shift);
-    abs(Shift%26);
+    Shift %= 26;
     for (int i = 0; i < strlen(Message); i++)
         if (isalpha(Message[i]))
             for (int j = 0; j < Shift; j++)
             {
-                if (Message[i] == 'Z')
+                if (Message[i] == 'Z') // try to use % instead of if else
                     Message[i] = 'A';
                 else
                     Message[i]++;
@@ -30,12 +30,12 @@ void decrypt()
 {
     printf("Enter Decryption Key: ");
     scanf("%d", &Shift);
-    abs(Shift%26);
+    Shift %= 26;
     for (int i = 0; i < strlen(Message); i++)
         if (isalpha(Message[i]))
             for (int j = 0; j < Shift; j++)
             {
-                if (Message[i] == 'A')
+                if (Message[i] == 'A') 
                     Message[i] = 'Z';
                 else
                     Message[i]--;
