@@ -49,7 +49,6 @@ void destuffData()
             count = 0;
         }
     }
-    deStuffedData[length] = '\0';
     printf("\nDe-Stuffed Stream:\n");
     printf("%s\n", deStuffedData);
 }
