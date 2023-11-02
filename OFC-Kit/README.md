@@ -53,6 +53,6 @@
 		
 		$$1 ~ slot ~ time = {frame ~ time\over 12} ~ s$$
 		
-		$$1 ~ bit ~ time(t_b) = {frame ~ time\over 8} ~ s$$
+		$$1 ~ bit ~ time(t_b) = {slot ~ time\over 8} ~ s$$
 		
 		$$1~ bit ~ rate = {1\over t_b} ~ bps$$
