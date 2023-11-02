@@ -45,7 +45,7 @@ Decrypted_Walsh_Table = zeros(4, 4);
 for row = 1:4
     for col = 1:4
         Decrypted_Walsh_Table(row, col) = Multiplexed_Data(col) * Walsh(row, col);
-        Demultiplexed_Data(row) = Demultiplexed_Data(row) + Multiplexed_Data(col) * Walsh(row, col);
+        Demultiplexed_Data(row) = Demultiplexed_Data(row) + Decrypted_Walsh_Table(row, col);
     end
 end
 Demultiplexed_Data = Demultiplexed_Data / 4;
