@@ -25,7 +25,7 @@
 
 	1. Coupling Loss:
     		- Connect a 1m OFC to a 3m OFC via a coupler
-		- Measure $ V_{4_{pk-pk}} $ of the (1+3)m OFC
+		- Measure $V_{4_{pk-pk}}$ of the (1+3)m OFC
 		- Compute the coupling loss using the following formula
 
 		$$\eta = -10\log_{10}({V_f\over V_1}) - \alpha ' (l_3+l_1)$$
