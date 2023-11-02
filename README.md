@@ -33,7 +33,7 @@
     	- Toggle to digital mode 
 		- Turn off the signal generator
 		- Connect the OFC from 850 nm LED (Tx) to the op-amp (Rx)
-		- Remove S4 jumper
+		- Remove S4's jumper
 		- Output of the op-amp is connected to the upper pin of S4
 		- The other pin is connected to IO2 which is connected to the CRO
 		- Flip the 8-bit data transmit switches
