@@ -44,7 +44,7 @@ int main()
         int TotalBitFlips = (rand() % 5) + 1; // to prevent 0 condition
         for (int i = 1; i <= TotalBitFlips; i++)
         {
-            int BitIndex = rand() % 13; // 16 bits of data
+            int BitIndex = rand() % 15; // 16 bits of data
             Message[BitIndex] = Message[BitIndex] == '1' ? '0' : '1';
         }
     }
