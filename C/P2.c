@@ -4,13 +4,13 @@
 #include <string.h>
 #include <conio.h>
 
-char flag[] = "01111110", stuffedData[50], deStuffedData[50]; // put vars in main later
+char flag[] = "01111110", stuffedData[50], deStuffedData[50];
 int length, count;
 
 void stuffData()
 {
     char inputCharacter;
-    length = 8;
+    length = strlen(flag);
     count = 0;
     strcat(stuffedData, flag);
     printf("\nEnter the Data:\n"); // Add data to the string after the preamble
@@ -36,7 +36,7 @@ void destuffData()
 {
     length = 0;
     count = 0;
-    for (int i = 8; i < strlen(stuffedData) - 8; i++)
+    for (int i = strlen(flag); i < strlen(stuffedData) - strlen(flag); i++)
     {
         if (stuffedData[i] == '1')
             count++;
