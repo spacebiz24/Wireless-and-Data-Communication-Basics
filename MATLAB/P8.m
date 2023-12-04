@@ -23,7 +23,7 @@ for i = 1:length(snr_dB)
 end
 snr = 10.^(snr_dB / 10);
 theoryBer = 0.5.*(1-sqrt(snr./(snr+1)));
-theoryBerAWGN = 0.5 *erfc(sqrt(10.^(snr_dB/10)));
+theoryBerAWGN = 0.5 *erfc(sqrt(snr));
 semilogy(snr_dB, theoryBer, '-', 'LineWidth', 2);
 hold on;
 semilogy(snr_dB, BER, 'or', 'LineWidth', 2);
