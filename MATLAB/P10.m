@@ -4,40 +4,31 @@
 clc;
 close all;
 
-% Number of information bits
-m= 10^3;
-%Range of SNR values
-snrdB = 0:20;
-for j=1:length(snrdB)
-    nerr = 0;
-    nbits = 0;
-    while nerr < 100
-        infbits=round(rand(1,m));
-        % BPSK modulator
-        x=-2*(infbits-0.5);
-        % Noise variance
-        N0=1/10^(snrdB(j)/10);
-        nl= sqrt(N0/2)*abs((randn(1,length(x)) + i*randn(1, length(x)))); %noise for the first
-        n2 = sqrt(N0/2)*abs((randn(1,length(x)) + i*randn(1,length(x)))); %noise for the second
-        hl =sqrt(0.5)*abs((randn(1,length(x)) + i*randn(1, length(x)))); %rayleigh amplitude
-        h2 = sqrt(0.5)*abs((randn(1,length(x))+ i*randn(1 , length(x)))); %orayleigh amplitude 2
-        %Equal Gain combining
-        yl =hl.*x+nl; % Signal 1
-        y2 =h2.*x+n2; % Signal 2
-        yequal = 0.5*(yl +y2);
-        % dec metric=(norm(y equal- hl *x-h2 *x)y^2;
-        % Decision making at the Receiver
-        estbits=yequal<0;
-        % Calculate Bit Errors
-        diff=infbits-estbits;
-        nerr=nerr+sum(abs(diff));
-        nbits=nbits+length(infbits);
+m = 10^5;
+snr_dB = 0:20;
+for i = 1:length(snr_dB)
+    n_err = 0;
+    n_bits = 0;
+    while n_err < 100
+        inf_bits = round(rand(1,m));
+        x = -2*(inf_bits - 0.5); % BPSK modulator
+        N0 = 1/10^(snr_dB(i)/10); % Noise variance
+        nl = sqrt(N0/2) * abs(randn(1,length(x)) + i*randn(1, length(x))); % noise 1
+        n2 = sqrt(N0/2) * abs(randn(1,length(x)) + i*randn(1, length(x))); % noise 2
+        hl = sqrt(0.5) * abs(randn(1,length(x)) + i*randn(1, length(x))); % rayleigh amplitude 1
+        h2 = sqrt(0.5) * abs(randn(1,length(x)) + i*randn(1, length(x))); % rayleigh amplitude 2
+        yl = hl.*x + nl;
+        y2 = h2.*x + n2;
+        y_equal = 0.5 * (yl + y2); % Equal Gain combining
+        est_bits = y_equal < 0; % Decision making at the Receiver
+        diff = inf_bits - est_bits;
+        n_err = n_err + sum(abs(diff));
+        n_bits = n_bits + length(inf_bits);
     end
-    % Calculate Bit Error Rate
-    BER(j)=nerr/nbits;
+    BER(i) = n_err / n_bits;
 end
-semilogy(snrdB,BER,'or-','LineWidth',2);
-legend('Rayleigh EGC Simulated', 'Rayleigh Theoretical');
+semilogy(snr_dB, BER, 'or-', 'LineWidth', 2);
+legend('Rayleigh EGC Simulated');
 axis([0 20 10^-5 1]);
 xlabel('SNR (dB)');
 ylabel('BER');
