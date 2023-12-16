@@ -9,14 +9,14 @@ for i = 1:length(snr_dB)
     n_bits = 0;
     while n_err < 100
         inf_bits = round(rand(1,m));
-        x = -2*(inf_bits - 0.5);
-        N0 = 1/10^(snr_dB(i)/10);
-        n = sqrt(N0/2) * abs(randn(1, length(x)) + i*randn(1,length(x)));
-        h = sqrt(0.5) * (randn(1,length(x)) + i*randn(1,length(x)));
+        x = -2*(inf_bits - 0.5); % BPSK modulator
+        N0 = 1/10^(snr_dB(i)/10); % Noise variance
+        n = sqrt(N0/2) * abs(randn(1, length(x)) + i*randn(1, length(x))); % noise 1
+        h = sqrt(0.5) * abs(randn(1,length(x)) + i*randn(1, length(x))); % rayleigh amplitude
         y = h.*x + n;
         y = y./ h;
-        est_bits = y < 0;
-        diff = inf_bits - est_bits;
+        est_bits = y < 0; % Decision making at the Receiver
+        diff = inf_bits - est_bits; 
         n_err = n_err + sum(abs(diff));
         n_bits = n_bits + length(inf_bits);
     end
