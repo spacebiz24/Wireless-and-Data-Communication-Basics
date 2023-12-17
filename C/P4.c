@@ -18,7 +18,7 @@ void encrypt()
         if (isalpha(Message[i]))
             for (int j = 0; j < Shift; j++)
             {
-                if (Message[i] == 'Z') // try to use % instead of if else
+                if (Message[i] == 'Z')
                     Message[i] = 'A';
                 else
                     Message[i]++;
