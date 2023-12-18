@@ -14,7 +14,7 @@ for i = 1:12
     Lambda(i) = 3e8 / (f(i) * 10 ^ 6);
     PL_D0(i) = 20 * log10((4 * pi * d0) / Lambda(i));
     if(with_shadowing)
-        X(i) = randn(size(PL_D0(i))) * Sigma(i);  % X(i) = normrnd(0, Sigma(i));
+        X(i) = X(i) = normrnd(0, Sigma(i)); % randn(size(PL_D0(i))) * Sigma(i); 
     end
 end
 for i = 1:12
