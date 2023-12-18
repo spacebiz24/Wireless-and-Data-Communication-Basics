@@ -12,7 +12,7 @@ X = zeros(1,12);
 
 for i = 1:12
     Lambda(i) = 3e8 / (f(i) * 10 ^ 6);
-    PL_D0(i) = 20 * log10((4 * pi * Fixed_Distance) / Lambda(i));
+    PL_D0(i) = 20 * log10((4 * pi * d0) / Lambda(i));
     if(with_shadowing)
         X(i) = randn(size(PL_D0(i))) * Sigma(i);  % X(i) = normrnd(0, Sigma(i));
     end
