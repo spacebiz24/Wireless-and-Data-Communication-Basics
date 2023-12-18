@@ -1,7 +1,7 @@
 % CDMA Technique
 clc
-clear;
 close all;
+
 BitStream = input("Enter 4 bits of data: ");
 XRange = [1 5];
 YRange = [-4 4];
