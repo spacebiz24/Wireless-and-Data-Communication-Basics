@@ -24,7 +24,7 @@ for i = 1:12
     end
 end
 
-plot(d, Path_Loss);
+plot(d, PL);
 legend("Retail Store", "Grocery Store", "Office Hard Partition", "Office Soft Partition", "Textile/Chemical",...
     "Paper/Cereals", "Metal Working", "Indoor Street", "Textile/Chemical", "Metal Working");
 xlabel("Distance in m");
