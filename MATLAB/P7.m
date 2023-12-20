@@ -29,7 +29,7 @@ for Number = 1:4
     title(sprintf("Station %d Code", Number));
     xlim(XRange);
     ylim(YRange);
-    grid();
+    grid on;
 end
 
 subplot(4, 4, 5:8);
@@ -37,7 +37,7 @@ stairs(Multiplexed_Data);
 title("Multiplexed Channnel Data");
 xlim(XRange)
 ylim(YRange)
-grid();
+grid on;
 
 Decrypted_Walsh_Table = zeros(4, 4);
 Demultiplexed_Data = zeros(1, 4);
@@ -56,7 +56,7 @@ for Number = 1:4
     title(sprintf("Inner Product %d", Number));
     xlim(XRange);
     ylim(YRange);
-    grid();
+    grid on;
 end
 
 subplot(4, 4, 13:16);
@@ -64,4 +64,4 @@ stairs(Demultiplexed_Data);
 title("Demultiplexed Channnel Data");
 xlim(XRange);
 ylim(YRange);
-grid();
+grid on;
