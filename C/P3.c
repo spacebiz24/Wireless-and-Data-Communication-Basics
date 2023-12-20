@@ -12,6 +12,24 @@ char Preamble[] = {DLE, STX}, Postamble[] = {DLE, ETX};
 char stuffedData[50], deStuffedData[50];
 int length;
 
+void displayData(char CurrChar)
+{
+    switch (CurrChar)
+    {
+    case DLE:
+        printf("DLE");
+        break;
+    case STX:
+        printf("STX");
+        break;
+    case ETX:
+        printf("ETX");
+        break;
+    default:
+        printf("%c", CurrChar);
+    }
+}
+
 void stuffData()
 {
     char inputCharacter;
@@ -19,15 +37,17 @@ void stuffData()
     strcat(stuffedData, Preamble);
     printf("\nEnter the data stream:\n");
     printf("CTRL+P -> DLE\nCTRL+B -> STX\nCTRL+C -> ETX\n");
-    while ((inputCharacter = getche()) != '\r')
+    while ((inputCharacter = getch()) != '\r')
     {
+        displayData(inputCharacter);
         if (inputCharacter == DLE)
             stuffedData[length++] = DLE;
         stuffedData[length++] = inputCharacter;
     }
     strcat(stuffedData, Postamble);
     printf("\nCharacter Stuffed Stream:\n");
-    printf("%s\n", stuffedData);
+    for (int i = 0; i < strlen(stuffedData); i++)
+        displayData(stuffedData[i]);
 }
 
 void destuffData()
@@ -40,13 +60,14 @@ void destuffData()
         deStuffedData[length++] = stuffedData[i];
     }
     printf("\nDe-Stuffed Stream:\n");
-    printf("%s\n", deStuffedData);
+    for (int i = 0; i < strlen(deStuffedData); i++)
+        displayData(deStuffedData[i]);
 }
 
 void main()
 {
     stuffData();
     destuffData();
-    printf("Press a key to exit");
+    printf("\nPress a key to exit");
     getch();
 }
