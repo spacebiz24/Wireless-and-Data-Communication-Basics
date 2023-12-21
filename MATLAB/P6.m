@@ -34,9 +34,9 @@ L50_2_dB = L50todB(L50_2, f);
 
 % Large City Urban Area
 if f < 3e9
-    ahre_3 = 8.29 * log10(1.54 * hre).^2 - 1.1;
+    ahre_3 = 8.29 * (log10(1.54 * hre)).^2 - 1.1;
 else
-    ahre_3 = 3.2 * log10(11.75 * hre).^2 - 4.97;
+    ahre_3 = 3.2 * (log10(11.75 * hre)).^2 - 4.97;
 end
 L50_3 = MediumPathLoss(ahre_3, d, hte, f);
 L50_3_dB = L50todB(L50_3, f);
@@ -61,5 +61,5 @@ function L50 = MediumPathLoss(ahre, d, hte, f)
 end
 
 function L50_dB = L50todB(L50, f)
-    L50_dB = L50 - (2 * log10(f / 28)^2) - 5.4;
+    L50_dB = L50 - (2 * (log10(f / 28))^2) - 5.4;
 end
