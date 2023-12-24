@@ -16,17 +16,17 @@ void displayData(char CurrChar)
 {
     switch (CurrChar)
     {
-    case DLE:
-        printf("DLE");
-        break;
-    case STX:
-        printf("STX");
-        break;
-    case ETX:
-        printf("ETX");
-        break;
-    default:
-        printf("%c", CurrChar);
+        case DLE:
+            printf("DLE");
+            break;
+        case STX:
+            printf("STX");
+            break;
+        case ETX:
+            printf("ETX");
+            break;
+        default:
+            printf("%c", CurrChar);
     }
 }
 
